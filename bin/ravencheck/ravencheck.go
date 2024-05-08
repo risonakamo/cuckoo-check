@@ -25,8 +25,8 @@ func main() {
 	}
 
 	// in mins
-	var timeMin int=10
-	var timeMax int=15
+	var timeMin int=9
+	var timeMax int=18
 	// --- END config
 
 
@@ -51,7 +51,7 @@ func main() {
 			// go_utils.RandRange(2000,4000),
 		)*time.Millisecond)
 
-		fmt.Println("trigger",count)
+		fmt.Println("trigger",count,go_utils.GetTimeStamp())
 		count++
 		kb.SetKeys(go_utils.RandFromArray(keys))
 		e=kb.Launching()
