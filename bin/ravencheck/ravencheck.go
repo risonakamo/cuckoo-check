@@ -44,15 +44,15 @@ func main() {
 	}
 
 	var count int=0
+	fmt.Println(count,go_utils.GetTimeStamp())
 	for {
-		fmt.Println("sleeping...")
 		time.Sleep(time.Duration(
 			go_utils.RandRange(timeMinMille,timeMaxMille),
 			// go_utils.RandRange(2000,4000),
 		)*time.Millisecond)
 
-		fmt.Println("trigger",count,go_utils.GetTimeStamp())
 		count++
+		fmt.Println(count,go_utils.GetTimeStamp())
 		kb.SetKeys(go_utils.RandFromArray(keys))
 		e=kb.Launching()
 
